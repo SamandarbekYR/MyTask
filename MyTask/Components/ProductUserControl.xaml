@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="MyTask.Components.ProductUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyTask.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="370" d:DesignWidth="300">
+    <Grid Height="350" Width="250"
+          Margin="20 20 0 0">
+        <Border CornerRadius="12"
+                Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="50 35 50 5">
+                    <Border CornerRadius="90" 
+                            BorderThickness="1" 
+                            BorderBrush="Aqua">
+                        <Border.Background>
+                            <ImageBrush x:Name="ProductImage" ImageSource="/Assets/Images/Burger.jpg"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackPanel Margin="15">
+                        <Label x:Name="ProductName" Content="Chicken Masala" 
+                               FontFamily="JetBrains Mono"
+                               FontSize="18"
+                               FontWeight="ExtraBlack"></Label>
+                        <Label x:Name="ProductDescription"
+                               Content="Description" FontSize="14" 
+                               FontFamily="JetBrains Mono"></Label>
+
+                        <Border Padding="0 0 0 35"
+                                Margin="0 5">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <Border Background="Cyan" CornerRadius="12"
+                                       
+                                        Padding="5 8 5 8"
+                                        VerticalAlignment="Center">
+                                    <Path Data="{DynamicResource OrderPath}" Fill="Black"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
